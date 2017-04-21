@@ -1,0 +1,249 @@
+.pickadate {
+  font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+}
+.pickadate a {
+  color: #666666;
+}
+.pickadate a:visited {
+  color: #666666;
+}
+.pickadate-header {
+  height: 48px;
+}
+.pickadate-main {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+.pickadate-cell {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.pickadate-cell li {
+  display: block;
+  float: left;
+  border: 1px solid #DCDCDC;
+  border-width: 0 1px 1px 0;
+  width: 14%;
+  padding: 1.3% 0 0.5% 0;
+  line-height: normal;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.pickadate-cell li:nth-child(7n+0) {
+  border-right: 1px solid #DCDCDC;
+}
+.pickadate-cell li:nth-child(1), .pickadate-cell li:nth-child(8), .pickadate-cell li:nth-child(15), .pickadate-cell li:nth-child(22), .pickadate-cell li:nth-child(29), .pickadate-cell li:nth-child(36) {
+  border-left: 1px solid #DCDCDC;
+}
+.pickadate-cell .pickadate-disabled {
+  cursor: pointer;
+  color: #DCDCDC;
+}
+.pickadate-cell .pickadate-disabled a {
+  color: #DCDCDC;
+}
+.pickadate-cell .pickadate-enabled {
+  cursor: pointer;
+  color: #666666;
+}
+.pickadate-cell .pickadate-today {
+  background-color: #c8c8c8;
+}
+
+/*出行日*/
+.pickadate-cell .pickadate-implement {
+  background-color: #55A92E;
+  color: white;
+}
+/*出行日*/
+.pickadate-cell .pickadate-prohibit {
+  background-color: #333;
+  color: white;
+}
+
+/*可行日*/
+.pickadate-cell .pickadate-feasible {
+  background-color: #fcaf17;
+  color: white;
+}
+
+/*禁止日*/
+.pickadate-cell .pickadate-forbidden {
+  background-color: #aa2116;
+  color: white;
+}
+
+/*假期*/
+.pickadate-cell .pickadate-holidy {
+  background-color: #0976F4;
+  color: white;
+}
+.pickadate-cell .pickadate-head {
+  border-top: 1px solid #DCDCDC;
+  background: #f3f3f3;
+  font-size: 1.5em
+}
+.pickadate-cell .pickadate-head:nth-child(1), .pickadate-cell .pickadate-head:nth-child(7) {
+  background: #f3f3f3;
+}
+.pickadate-cell li .pickadate-cell-des {
+  line-height: 10px;
+  font-size:8px;
+  margin: 2px 0px 2px 0px;
+  height:10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.pickadate-centered-heading {
+  font-weight: normal;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 48px;
+  background-color: #524439;
+  color: white;
+}
+.pickadate-controls {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+.pickadate-controls .next {
+  float: right;
+  margin-right: 48px;
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+}
+
+.pickadate-controls .pre {
+  float: left;
+  margin-left: 48px;
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+}
+
+.pickadate-controls img {
+  font-size: 0.9em;
+  width: 48px;
+  height: 48px;
+}
+.pickadate-modal {
+  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 5px 5px 5px;
+  z-index: 1000;
+}
+.roundDiv{
+  width: 35px;
+  height: 35px;
+  border-radius: 17px;
+  margin: auto;
+  line-height: 35px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+/*按钮*/
+.chk_1 {
+  display: none;
+}
+
+.chk_1 + label {
+  background-color: #FFF;
+  border: 1px solid #C1CACA;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
+}
+.chk_1 + label:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.chk_1:checked + label {
+  background-color: #ECF2F7;
+  border: 1px solid #92A1AC;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+  color: #243441;
+}
+
+.chk_1:checked + label:after {
+  content: '\2714'; //勾选符号
+position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #758794;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4em;
+  padding: 1px 0 0 0;
+  vertical-align: text-top;
+}
+.item{
+    width:100%;
+    height:25px;
+    margin: 5px;
+}
+.item .title{
+    margin-top: 2px;
+    float:left;
+}
+.item .title a{
+    color:#ffa82c;
+    font-weight: bold;
+}
+.item select {
+    float: left;
+    margin-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #fff;
+}
+.thefour{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    color: #7f7d7a;
+}
+.thefour .note-div{
+    margin-bottom: 10px;
+}
+.thefour .note-div .color{
+    height: 25px;
+    width: 25px;
+    float:left;
+    margin-right: 10px;
+    border-radius: 12px;
+}
+.thefour .note-div .color.feasible{
+    background-color: #fcaf17;
+}
+.thefour .note-div .color.implement{
+    background-color: #55A92E;
+}
+.thefour .note-div .color.infeasible{
+    background-color: #aa2116;
+}
+.thefour .note-div .color.holiday{
+    background-color: #0976F4;
+}
+.thefour .note-div .color.prohibit{
+    background-color: #333;
+}
+.thefour .note-div span{
+    height: 25px;
+    line-height: 25px;
+}

@@ -1,0 +1,1 @@
+angular.module('pickdateapp', ['app_controller','app_config']);

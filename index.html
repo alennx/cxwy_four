@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>开四停四</title>
+    <link href="css/angular-pickadate.css" rel="stylesheet">
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/pickdate/app.js"></script>
+    <script src="js/pickdate/modules.js"></script>
+    <script src="js/holidays.js"></script>
+    <script src="js/pickdate/four_angularjs_pickdate.js"></script>
+    <script src="js/angular-locale_zh-cn.js"></script>
+    <script src="js/pickdate/pickdateCtrl.js"></script>
+</head>
+<body ng-app="pickdateapp" ng-controller="pickdateCtrl">
+    <!--<div class="item">-->
+        <!--<div class="title">当前车辆：{{selectedChice.hphm}}</div>-->
+        <!--<select ng-change="change(selectedChice)" ng-model="selectedChice" ng-options="x.hphm for x in hplist">-->
+        <!--</select>-->
+    <!--</div>-->
+    <div id='calender' hphm="hphm" hpzl='hpzl' pickadate multiple ng-model="date" dataname="{{selectedChice}}"></div>
+    <div class="thefour">
+        <div class="note-div">提示 : 点击日历标注出行日</div>
+        <div class="note-div">
+            <div class="color feasible"></div><span>表示可以出行</span>
+        </div>
+        <div class="note-div">
+            <div class="color implement"></div><span>表示已经出行</span>
+        </div>
+        <div class="note-div">
+            <div class="color infeasible"></div><span>表示禁止出行</span>
+        </div>
+        <div class="note-div">
+            <div class="color prohibit"></div><span>表示违法出行</span>
+        </div>
+        <div class="note-div">
+            <div class="color holiday"></div><span>表示节假日（节假日不限制开四停四）</span>
+        </div>
+    </div>
+</body>
+</html>
